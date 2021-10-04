@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         val btncon = findViewById<View>(R.id.button) as Button
         val spinner = findViewById<View>(R.id.snipper) as Spinner
 
-        val cur = arrayListOf("INR", "USD", "AUD", "SAR", "CNY", "JPI")
+        val cur = arrayListOf("GBP", "USD", "AUD", "SAR", "KWD", "JPI","SYP")
 
         var selected: Int = 0
 
@@ -54,12 +54,13 @@ class MainActivity : AppCompatActivity() {
                 curencyDetails = it
 
                 when (selected) {
-                    0 -> disp(calc(curencyDetails?.eur?.inr?.toDouble(), currency));
+                    0 -> disp(calc(curencyDetails?.eur?.gbp?.toDouble(), currency));
                     1 -> disp(calc(curencyDetails?.eur?.usd?.toDouble(), currency));
                     2 -> disp(calc(curencyDetails?.eur?.aud?.toDouble(), currency));
                     3 -> disp(calc(curencyDetails?.eur?.sar?.toDouble(), currency));
-                    4 -> disp(calc(curencyDetails?.eur?.cny?.toDouble(), currency));
+                    4 -> disp(calc(curencyDetails?.eur?.kwd?.toDouble(), currency));
                     5 -> disp(calc(curencyDetails?.eur?.jpy?.toDouble(), currency));
+                    6-> disp(calc(curencyDetails?.eur?.syp?.toDouble(), currency));
                 }
             })
         }

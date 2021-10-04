@@ -13,8 +13,8 @@ package com.example.converter
 
         class Cur {
 
-            @SerializedName("inr")
-            var inr: String? = null
+            @SerializedName("gbp")
+            var gbp: String? = null
 
             @SerializedName("usd")
             var usd: String? = null
@@ -25,11 +25,14 @@ package com.example.converter
             @SerializedName("sar")
             var sar: String? = null
 
-            @SerializedName("cny")
-            var cny: String? = null
+            @SerializedName("kwd")
+            var kwd: String? = null
 
             @SerializedName("jpy")
             var jpy: String? = null
+
+            @SerializedName("syp")
+            var syp: String? = null
 
         }
     }
